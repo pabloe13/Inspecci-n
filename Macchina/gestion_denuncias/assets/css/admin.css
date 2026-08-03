@@ -1,0 +1,131 @@
+/* Layout Principal de la Intranet */
+.admin-layout {
+    display: flex;
+    height: 100vh;
+    overflow: hidden;
+    background-color: var(--tse-bg-light);
+}
+
+/* Sidebar (Menú Lateral) */
+.sidebar {
+    width: 260px;
+    background-color: var(--tse-primary);
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    transition: left var(--transition-speed) ease-in-out;
+    z-index: 1040;
+    box-shadow: 2px 0 10px rgba(0,0,0,0.1);
+}
+
+.sidebar-brand {
+    height: 70px;
+    display: flex;
+    align-items: center;
+    padding: 0 1.5rem;
+    font-size: 1.1rem;
+    font-weight: 700;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+    color: #ffffff;
+    text-decoration: none;
+    letter-spacing: 0.5px;
+}
+
+.sidebar-nav {
+    flex: 1;
+    overflow-y: auto;
+    padding: 1.5rem 0;
+}
+
+.sidebar-link {
+    display: flex;
+    align-items: center;
+    padding: 0.8rem 1.5rem;
+    color: rgba(255,255,255,0.7);
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.2s;
+    border-left: 4px solid transparent;
+}
+
+.sidebar-link i {
+    width: 24px;
+    font-size: 1.1rem;
+    margin-right: 12px;
+    text-align: center;
+}
+
+.sidebar-link:hover, .sidebar-link.active {
+    background-color: rgba(255,255,255,0.05);
+    color: #ffffff;
+    border-left-color: var(--tse-accent);
+}
+
+/* Área de contenido principal */
+.main-wrapper {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+/* Navbar Superior */
+.top-navbar {
+    height: 70px;
+    background-color: #ffffff;
+    border-bottom: 1px solid var(--tse-border);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 1.5rem;
+    z-index: 1030;
+}
+
+.top-navbar .navbar-search input {
+    border-radius: 20px;
+    padding-left: 1rem;
+    background-color: var(--tse-bg-light);
+    border: 1px solid transparent;
+}
+
+.top-navbar .navbar-search input:focus {
+    background-color: #ffffff;
+    border-color: var(--tse-border);
+}
+
+/* Espacio dinámico para inyectar vistas (Dashboard, Tablas, etc) */
+.content-area {
+    flex: 1;
+    overflow-y: auto;
+    padding: 1.5rem;
+}
+
+/* Overlay para móviles */
+.sidebar-overlay {
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background-color: rgba(0,0,0,0.5);
+    z-index: 1035;
+    opacity: 0;
+    visibility: hidden;
+    transition: all var(--transition-speed);
+}
+
+/* Responsive: Comportamiento en Tablets y Móviles */
+@media (max-width: 991.98px) {
+    .sidebar {
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        left: -260px; /* Oculto por defecto */
+    }
+    
+    .sidebar.show {
+        left: 0;
+    }
+
+    .sidebar-overlay.show {
+        opacity: 1;
+        visibility: visible;
+    }
+}

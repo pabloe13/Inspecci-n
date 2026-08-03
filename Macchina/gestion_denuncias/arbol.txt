@@ -1,0 +1,76 @@
+Listado de rutas de carpetas para el volumen OS
+El número de serie del volumen es 000000AC 940C:3FDB
+C:.
+¦   .htaccess
+¦   arbol.txt
+¦   index.php
+¦   
++---api
++---assets
+¦   +---css
+¦   ¦       admin.css
+¦   ¦       main.css
+¦   ¦       
+¦   +---icons
+¦   +---img
+¦   +---js
+¦       ¦   admin.js
+¦       ¦   dashboard.js
+¦       ¦   denuncias.js
+¦       ¦   main.js
+¦       ¦   
+¦       +---modules
+¦               denuncias.js
+¦               denuncia_crear.js
+¦               detalle_denuncia.js
+¦               solicitudes.js
+¦               
++---config
+¦       config.php
+¦       database.php
+¦       
++---core
+¦       Conexion.php
+¦       Controller.php
+¦       Router.php
+¦       
++---helpers
+¦       utils.php
+¦       
++---includes
+¦       footer.php
+¦       header.php
+¦       navbar.php
+¦       sidebar.php
+¦       
++---models
+¦       DashboardModel.php
+¦       Denuncia.php
+¦       
++---modules
+¦   +---configuracion
+¦   +---dashboard
+¦   ¦       DashboardController.php
+¦   ¦       
+¦   +---denuncias
+¦   ¦       DenunciasController.php
+¦   ¦       
+¦   +---reportes
+¦   +---solicitudes
+¦           SolicitudesController.php
+¦           
++---uploads
+¦   +---evidencias
+¦   +---temp
++---views
+    +---dashboard
+    ¦       index.php
+    ¦       
+    +---denuncias
+    ¦       crear.php
+    ¦       detalle.php
+    ¦       index.php
+    ¦       
+    +---solicitudes
+            index.php
+            
